@@ -11,4 +11,13 @@
     
         mysqli_query($conexao, $inserir);
     }
+
+    function listarJogadores()
+    {
+        $conexao = conectarBD();
+        $sql = "SELECT * FROM jogador";
+        $resultado = mysqli_query($conexao, $sql);
+
+        return $resultado;
+    }
 ?>
