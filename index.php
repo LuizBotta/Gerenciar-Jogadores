@@ -15,10 +15,11 @@
 </form>
 
 <?php
+    require_once "../Gerenciar-Jogadores/processamento/funcoesBD.php";
     $listaJogadores = listarJogadores();
      while($jogadores = mysqli_fetch_assoc($listaJogadores)){
             echo  $jogadores["nome"] . " " . $jogadores["nacionalidade"] . " " 
-            . $jogadores["posicao"] . " " . $jogadores["QuantidadeGol"] . " " ;
+            . $jogadores["posicao"] . " " . $jogadores["quantidadeGol"] . " " ;
         }
 
 ?>
